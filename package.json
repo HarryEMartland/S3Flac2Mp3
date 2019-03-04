@@ -1,0 +1,18 @@
+{
+  "name": "S3Flack2Mp3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "zip": "npm prune --production && zip -r app.zip node_modules *.js",
+    "test": "echo \"Error: no test specified\"",
+    "start": "node -e 'require(\"./app.js\").handler(null, null, ()=>{})'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.353.0"
+  }
+}

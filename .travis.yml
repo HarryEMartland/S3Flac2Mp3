@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "node"
+cache:
+  directories:
+    - "node_modules"
+before_deploy:
+  - npm prune --production
+deploy:
+  provider: lambda
+  function_name: "S3Flack2Mp3"
+  region: "eu-west-1"
+  role: "arn:aws:iam::818032293643:role/lambda-S3Flack2Mp3"
+  runtime: "nodejs8.10"
+  module_name: "index"
+  handler_name: "handler"
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
+  timeout: 10
+  on:
+    branch: master
