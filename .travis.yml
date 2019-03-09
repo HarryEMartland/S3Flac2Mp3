@@ -17,6 +17,6 @@ deploy:
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: "$AWS_SECRET_KEY"
   timeout: 120
-  memory_size: 256
+  memory_size: 320
   on:
     branch: master
